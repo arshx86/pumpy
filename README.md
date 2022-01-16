@@ -17,8 +17,8 @@ Pumpy has simple usage, it only wants 3 parameters from you.
 ```bash
 pumpy.exe <Target File Path> <Increase Size>
 ```
-> Target File Path: The full path of target file to pump. (Ex: C:\\somefile.txt)
-> Increase Size: Increase size as MB. (Ex: 10 equals to 10MB)
+* Target File Path: The full path of target file to pump. (Ex: C:\\somefile.txt)
+* Increase Size: Increase size as MB. (Ex: 10 equals to 10MB)
 
 ## Example
 ```bash
