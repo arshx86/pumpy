@@ -7,9 +7,9 @@ File Pumper &amp; Size Increaser Tool
 
 ## Advantages
 
-> Tool doesn't break the file.
-> Supports all type of files. (png, jpg, ico, png, txt - Even the exe!)
-> Fast pump/write. (1gb under of 2min)
+* Tool doesn't break the file.
+* Supports all type of files. (png, jpg, ico, png, txt - Even the exe!)
+* Fast pump/write. (1gb under of 2min)
 
 ## Usage
 
