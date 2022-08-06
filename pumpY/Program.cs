@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿#region
+
+using System;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace pumpY
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
             Console.Title = "pumpY";
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
@@ -21,10 +18,7 @@ namespace pumpY
             int HowMuch = 0;
             FileInfo TargetFile = null;
 
-            if (args.Length != 2)
-            {
-                ShowUsage();
-            }
+            if (args.Length != 2) ShowUsage();
 
             string ToPump = args[0];
 
@@ -34,7 +28,7 @@ namespace pumpY
             }
             catch
             {
-                print($"> Usage: pumpy.exe \"FileToPump.exe\" \"10\"");
+                print("> Usage: pumpy.exe \"FileToPump.exe\" \"10\"");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
@@ -58,18 +52,8 @@ namespace pumpY
 
             try
             {
-                FileStream fileStream = File.OpenWrite(TargetFile.FullName);
-                long num = fileStream.Seek(0L, SeekOrigin.End);
-                int num2 = HowMuch;
-                decimal d = new decimal(Convert.ToInt64((num2 * 1048576)) + fileStream.Length);
-                while (decimal.Compare(new decimal(num), d) < 0)
-                {
-                    num += 1L;
-                    fileStream.WriteByte(0);
-                }
-
-                fileStream.Close();
-                var NewLength = CalculateLength(new FileInfo(TargetFile.FullName));
+                var pumped = Pumper.Pump(TargetFile.FullName, HowMuch);
+                var NewLength = CalculateLength(pumped);
                 print($"> Success | {FileMB}mb => {NewLength}mb");
             }
             catch (Exception e)
@@ -78,7 +62,6 @@ namespace pumpY
                 Console.ReadKey();
                 Environment.Exit(0);
             }
-
         }
 
         private static void ShowUsage()
@@ -103,6 +86,7 @@ namespace pumpY
             Console.ReadKey();
             Environment.Exit(0);
         }
+
         private static long CalculateLength(FileInfo fi)
         {
             return fi.Length / 1000000;
@@ -110,7 +94,6 @@ namespace pumpY
 
         private static void print(string txt)
         {
-
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.Write("\nroot");
             Console.ForegroundColor = ConsoleColor.White;
@@ -121,8 +104,6 @@ namespace pumpY
             Console.Write(":");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write($"~ {txt}");
-
         }
-
     }
 }
