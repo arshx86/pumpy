@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31912.275
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pumpY", "pumpY.csproj", "{7358749E-80AF-4EDE-A553-9DD9E13CBF8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pumpy.GUI", "..\Pumpy.GUI\Pumpy.GUI.csproj", "{9FE781BA-D8BF-4F47-BB50-120D9F808D0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7358749E-80AF-4EDE-A553-9DD9E13CBF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7358749E-80AF-4EDE-A553-9DD9E13CBF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7358749E-80AF-4EDE-A553-9DD9E13CBF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE781BA-D8BF-4F47-BB50-120D9F808D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE781BA-D8BF-4F47-BB50-120D9F808D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE781BA-D8BF-4F47-BB50-120D9F808D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE781BA-D8BF-4F47-BB50-120D9F808D0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
